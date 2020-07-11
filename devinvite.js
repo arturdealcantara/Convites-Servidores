@@ -43,7 +43,7 @@ exports.run = async (client, message, args, prefix, idioma) => {
                     code: invite.code
                 }
 
-                embed4.addField(`**` + idioma("emb_invite_servidores_user $[1]", invi.criador) + `**`, `**Code:** [${invi.code}](https://discord.gg/${invi.code})\n${idioma("temp $[1]", invi.temporario === false ? idioma("nao") : idioma("sim"))}\n${idioma("usos $[1]", invi.usos)}`, true)
+                embed4.addField(`**` + idioma("emb_invite_servidores_user $[1]", invi.criador) + `**`, `**Code:** [${invi.code}](https://discord.gg/${invi.code})\n${idioma("temp $[1]", !invi.temporario ? idioma("sim") : idioma("nao"))}\n${idioma("usos $[1]", invi.usos)}`, true)
 
             })
         }
